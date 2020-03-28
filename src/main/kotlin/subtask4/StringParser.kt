@@ -1,15 +1,20 @@
 package subtask4
 
 import java.util.*
+//(e.g. «(ipsum [dolor<] amet)>»).
+
 class StringParser {
 
     // TODO: Complete the following function
+    //Input: String that might contain the following brackets: [], <>, ()
+
     fun getResult(inputString: String): Array<String> {
         val result = mutableListOf<String>()
         val brackets = arrayOf("<>", "[]", "()")
 
         val bracketList = mutableListOf<Bracket>()
 
+        //output g-string in the following brackets
         for (index in inputString.indices) {
             if (brackets.any { it.first() == inputString[index] }) {
                 bracketList.add(Bracket(brackets.first { it.first() == inputString[index] }, index, 0))
@@ -24,10 +29,12 @@ class StringParser {
         return result.toTypedArray()
     }
 
+        //Output: An Array of Strings. Each element of the array must contain substring between the open-close bracket.
+
     class Bracket {
-        public var type : String
-        public var startIndex : Int
-        public var endIndex : Int
+        var type : String
+        var startIndex : Int
+        var endIndex : Int
 
         constructor(type: String, startIndex: Int, endIndex: Int) {
             this.type = type

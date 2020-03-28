@@ -2,7 +2,8 @@ package subtask2
 
 class MiniMaxSum {
 
-    // TODO: Complete the following function
+    //Complete the following function
+        //System.out.println("All unit entered");
     fun getResult(input: IntArray): IntArray {
 
     val sumList = mutableListOf<Int>()
@@ -10,7 +11,7 @@ class MiniMaxSum {
     for (i in input) {
         sumList.add( input.sum() - i )
     }
-
+        //returning array values
     return arrayOf(sumList.min()!!, sumList.max()!!).toIntArray()
 }
 }

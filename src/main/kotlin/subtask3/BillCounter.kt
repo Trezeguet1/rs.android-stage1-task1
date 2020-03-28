@@ -2,8 +2,9 @@ package subtask3
 
 class BillCounter {
 
-    // TODO: Complete the following function
-    // The output could be "Bon Appetit" or the string with number(e.g "10")
+    //How to return int array from list of inputs?
+    //return arrayList[] = {u1,u2,u3,u4,u5};
+
     fun calculateFairlySplit(bill: IntArray, k: Int, b: Int): String {
         val listBill = bill.toMutableList()
         listBill.removeAt(k)
